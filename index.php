@@ -1,8 +1,8 @@
+<?php 
+    require_once('Administrator/dbinfo.inc.php');
+    $conn = oci_connect(ORA_CON_UN, ORA_CON_PW, ORA_CON_DB);
+ ?>
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,14 +15,26 @@
     <link rel="stylesheet" type="text/css" href="DIST/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="DIST/css/main.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="DIST/css/scrolling.css">
+    <link rel="stylesheet" type="text/css" href="DIST/css/scrolling1.css">
     <link rel="stylesheet" type="text/css" href="DIST/css/contact.css">
     <link rel="stylesheet" type="text/css" href="DIST/css/main2.css">
-    <link rel="stylesheet" type="text/css" href="DIST/css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="DIST/css/jquery.fancybox.css">
     <!-- Font-awesome CSS -->
     <link rel="stylesheet" type="text/css" href="DIST/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="DIST/css/font-awesome.min.css">
-</head>
+    <script language="javascript" type="text/javascript">
+      function myAlert() {
+      var pick =  confirm("Are you a administrator?");
+        if(pick === true){
+          window.location.href = "Administrator/authenticator.php";
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+    </script>
+
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
@@ -62,7 +74,8 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-        			    <li class="btn-warning"><a href="Administrator/authenticator.php"><i class="fa fa-user fa-fw"></i>Admininstrator</a></li>
+        			    <li class="btn-warning"><a onclick="myAlert()" href="#">
+                    <i class="fa fa-user fa-fw"></i>Admininstrator</a></li>
       			    </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -77,16 +90,14 @@
 
         <!-- Heading Row -->
         <div class="row">
-            <div class="col-md-8">
-                <img class="img-responsive img-rounded" src="http://placehold.it/900x350" alt="">
-            </div>
-            <!-- /.col-md-8 -->
-            <div class="col-md-4">
-                <h1>Business Name or Tagline</h1>
-                <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h1>Bondoc-Business Apartment</h1>
+                <p>Hi! Welcome visitor.</p>
+                <p>If you are looking for nice, safe and quiet resting place then you are in right place.</p>
                 <a class="btn btn-primary btn-lg page-scroll" href="#detail">Get Started!</a>
-            </div>
-            <!-- /.col-md-4 -->
+                </div>
+                <div class="col-md-3"></div>
         </div>
         <!-- /.row -->
         </div>
@@ -103,104 +114,64 @@
                   <h1>Unit Details <img  class="rotate" src="IMAGE/icon/retina.svg" alt="Generic placeholder image"></h1>
                </div>
                 <div class="col-lg-12">
-                	<div class="panel panel-default">
-  						      <div class="panel-body">
-    						      <div class="col-lg-4">
-                    	  <div class="panel panel-default">
-  							          <div class="panel-heading">Panel heading</div>
-  							            <div class="panel-body">
-    							            <div class="well well-sm">
-  									            Look, I'm in a small well!
-  									            Look, I'm in a small well!
-  									            Look, I'm in a small well!
-  									            Look, I'm in a small well!
-  									            Look, I'm in a small well!
-								              </div>
-  							            </div>
-						            </div>
-                	    </div>
-                	    <div class="col-lg-4">
-                    	  <div class="panel panel-default">
-  							          <div class="panel-heading">Panel heading</div>
-  							            <div class="panel-body">
-    							            <div class="well well-sm">
-  									            Look, I'm in a small well!
-								              </div>
-  							            </div>
-						            </div>
-                	    </div>
-                	    <div class="col-lg-4">
-                    	  <div class="panel panel-default">
-  							          <div class="panel-heading">Panel heading</div>
-  							            <div class="panel-body">
-    						                <div class="well well-sm">
-  									              Look, I'm in a small well!
-								                </div>
-  							            </div>
-						             </div>
-                	    </div>
-                	    <div class="col-lg-4">
-                    	  <div class="panel panel-default">
-  							          <div class="panel-heading">Panel heading</div>
-  							            <div class="panel-body">
-    						              <div class="well well-sm">
-  									            Look, I'm in a small well!
-								              </div>
-  							            </div>
-						            </div>
-                	    </div>
-                	    <div class="col-lg-4">
-                    	  <div class="panel panel-default">
-  							          <div class="panel-heading">Panel heading</div>
-  							            <div class="panel-body">
-    						              <div class="well well-sm">
-  									            Look, I'm in a small well!
-								              </div>
-  							            </div>
-						            </div>
-                	    </div>
-                	    <div class="col-lg-4">
-                    	  <div class="panel panel-default">
-  							          <div class="panel-heading">Panel heading</div>
-  							            <div class="panel-body">
-    						              <div class="well well-sm">
-  									            Look, I'm in a small well!
-								              </div>
-  						              </div>
-						            </div>
-                	    </div>
-                	    <div class="col-lg-4">
-                    	  <div class="panel panel-default">
-  							          <div class="panel-heading">Panel heading</div>
-  							            <div class="panel-body">
-    						              <div class="well well-sm">
-  									            Look, I'm in a small well!
-								              </div>
-  							            </div>
-						            </div>
-                	    </div>
-                	    <div class="col-lg-4">
-                    	  <div class="panel panel-default">
-  							          <div class="panel-heading">Panel heading</div>
-  							            <div class="panel-body">
-    						              <div class="well well-sm">
-  									            Look, I'm in a small well!
-								              </div>
-  							            </div>
-						            </div>
-                	    </div>
-                	    <div class="col-lg-4">
-                        <div class="panel panel-default">
-  							          <div class="panel-heading">Panel heading</div>
-  							            <div class="panel-body">
-    						              <div class="well well-sm">
-  									            Look, I'm in a small well!
-								              </div>
-  							            </div>
-						            </div>
-                	    </div>
-  						      </div>
-					        </div>  	
+                <div class="panel panel-default">
+                        <div class="panel-body">
+                	<?php 
+                        $s = oci_parse($conn, 'select * from building order by UNIT');
+                        $r = oci_execute($s);
+                        if (!$r) {
+                            echo "Error";
+                        }
+                        while (($row = oci_fetch_array($s, OCI_ASSOC+OCI_RETURN_NULLS)) !=false) {
+                            if ($row["STATUS"] == "Occupied") {
+                                echo '
+                            <div class="col-lg-4">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Unit '.$row["UNIT"].'</div>
+                                        <div class="panel-body">
+                                            <div class="well well-sm">
+                                                <label class="pull-left">Description:</label>
+                                                <textarea name="description" class="form-control" rows="10" id="textArea" style="margin-top: 0px; margin-bottom: 0px; height: 120px;" readonly="">'.$row["DESCRIPTION"].'</textarea>
+                                                <br>
+                                                <label class="pull-left">Monthly fee:</label>
+                                                <p>'.$row["MONTHLY_FEE"].'</p>
+                                            </div>
+                                            <div class="well well-sm">
+                                            <label class="pull-left">Status:</label>
+                                            <p>'.$row["STATUS"].'</p>
+                                            </div>
+                                        </div>
+                                </div>
+                           </div>';
+                            }
+                            else {
+                                echo '
+                            <div class="col-lg-4">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">Unit '.$row["UNIT"].'</div>
+                                        <div class="panel-body">
+                                            <div class="well well-sm">
+                                                <label class="pull-left">Description:</label>
+                                                <textarea name="description" class="form-control" rows="10" id="textArea" style="margin-top: 0px; margin-bottom: 0px; height: 120px;" readonly="">'.$row["DESCRIPTION"].'</textarea>
+                                                <br>
+                                                <label class="pull-left">Monthly fee:</label>
+                                                <p>'.$row["MONTHLY_FEE"].'</p>
+                                            </div>
+                                            <div class="well well-sm">
+                                            <label class="pull-left">Status:</label>
+                                            <p>'.$row["STATUS"].'</p>
+                                            </div>
+                                        </div>
+                                </div>
+                           </div>';
+                            }
+                            
+                        }
+                     ?>
+
+                    <!-------------------------------------------------------------------------------------->
+                </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -212,155 +183,151 @@
         <div class="jumbotron jumbotron-sm" style="background-color: DimGray;">
           <h1>Gallery <img  class="rotate" src="IMAGE/icon/picture.svg" alt="Generic placeholder image"></h1>
         </div>
-        <div id="main_area">
-        <!-- Slider -->
-          
+         <!--####
+### How to add in your boostrap project
+1) Add jQuery "<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>"
+2) Download fancybox (https://github.com/fancyapps/fancyBox)
+3) Or use CDN (http://cdnjs.com/libraries/fancybox)
+####--!>
+
+<!-- References: https://github.com/fancyapps/fancyBox -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
 <div class="container">
-    <div id="main_area">
-        <!-- Slider -->
-        <div class="row">
-            <div class="col-sm-6" id="slider-thumbs">
-                <!-- Bottom switcher of slider -->
-                <ul class="hide-bullets">
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-0">
-                            <img src="http://placehold.it/150x150&text=zero">
-                        </a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-1"><img src="http://placehold.it/150x150&text=1"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-2"><img src="http://placehold.it/150x150&text=2"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-3"><img src="http://placehold.it/150x150&text=3"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-4"><img src="http://placehold.it/150x150&text=4"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-5"><img src="http://placehold.it/150x150&text=5"></a>
-                    </li>
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-6"><img src="http://placehold.it/150x150&text=6"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-7"><img src="http://placehold.it/150x150&text=7"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-8"><img src="http://placehold.it/150x150&text=8"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-9"><img src="http://placehold.it/150x150&text=9"></a>
-                    </li>
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-10"><img src="http://placehold.it/150x150&text=10"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-11"><img src="http://placehold.it/150x150&text=11"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-12"><img src="http://placehold.it/150x150&text=12"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-13"><img src="http://placehold.it/150x150&text=13"></a>
-                    </li>
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-14"><img src="http://placehold.it/150x150&text=14"></a>
-                    </li>
-
-                    <li class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-15"><img src="http://placehold.it/150x150&text=15"></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-6">
-                <div class="col-xs-12" id="slider">
-                    <!-- Top part of the slider -->
-                    <div class="row">
-                        <div class="col-sm-12" id="carousel-bounding-box">
-                            <div class="carousel slide" id="myCarousel">
-                                <!-- Carousel items -->
-                                <div class="carousel-inner">
-                                    <div class="active item" data-slide-number="0">
-                                        <img src="http://placehold.it/470x480&text=zero"></div>
-
-                                    <div class="item" data-slide-number="1">
-                                        <img src="http://placehold.it/470x480&text=1"></div>
-
-                                    <div class="item" data-slide-number="2">
-                                        <img src="http://placehold.it/470x480&text=2"></div>
-
-                                    <div class="item" data-slide-number="3">
-                                        <img src="http://placehold.it/470x480&text=3"></div>
-
-                                    <div class="item" data-slide-number="4">
-                                        <img src="http://placehold.it/470x480&text=4"></div>
-
-                                    <div class="item" data-slide-number="5">
-                                        <img src="http://placehold.it/470x480&text=5"></div>
-                                    
-                                    <div class="item" data-slide-number="6">
-                                        <img src="http://placehold.it/470x480&text=6"></div>
-                                    
-                                    <div class="item" data-slide-number="7">
-                                        <img src="http://placehold.it/470x480&text=7"></div>
-                                    
-                                    <div class="item" data-slide-number="8">
-                                        <img src="http://placehold.it/470x480&text=8"></div>
-                                    
-                                    <div class="item" data-slide-number="9">
-                                        <img src="http://placehold.it/470x480&text=9"></div>
-                                    
-                                    <div class="item" data-slide-number="10">
-                                        <img src="http://placehold.it/470x480&text=10"></div>
-                                    
-                                    <div class="item" data-slide-number="11">
-                                        <img src="http://placehold.it/470x480&text=11"></div>
-                                    
-                                    <div class="item" data-slide-number="12">
-                                        <img src="http://placehold.it/470x480&text=12"></div>
-
-                                    <div class="item" data-slide-number="13">
-                                        <img src="http://placehold.it/470x480&text=13"></div>
-
-                                    <div class="item" data-slide-number="14">
-                                        <img src="http://placehold.it/470x480&text=14"></div>
-
-                                    <div class="item" data-slide-number="15">
-                                        <img src="http://placehold.it/470x480&text=15"></div>
-                                </div>
-                                <!-- Carousel nav -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/Slider-->
-        </div>
-
-    </div>
-</div>
-        <!--/Slider-->
-        </div>
+    <div class="row">
+        <div class='list-group gallery'>
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #1">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #2">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #3">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #4">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #5">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #6">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #7">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #8">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #9">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #10">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #11">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #12">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #13">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #14">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #15">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png" data-fancybox="group" data-caption="Caption #16">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+        </div> <!-- list-group / end -->
+    </div> <!-- row / end -->
+</div> <!-- container / end -->
 
     </div>
 </div>
@@ -375,13 +342,18 @@
         </div>
         </div>
         <div class="container">
-          <div class="google-map pull-left">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.8428341165245!2d120.94901281427525!3d14.664859089761544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b45048cec08f%3A0x7883c1dd8e70d784!2sT+Tiangco+St%2C+Malabon%2C+Metro+Manila!5e0!3m2!1sen!2sph!4v1485578404392" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div class="col-lg-4" style="padding-left: 50px;">
+            <form>
+            <legend><span class="glyphicon glyphicon-globe"></span> Our Address</legend>
+            <address>
+                43 Tiangco Street, Barangay Ibaiba,<br>
+                  Malabon City
+            </address>
+            </form>
           </div>
-          <div class="col-lg-4">
-            <h2>Address</h2>
-            <div class="well">43 Tiangco St., Brgy. Ibaiba, Malabon City</div>
-          </div>
+          <div class="col-md-6">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.8428341165245!2d120.94901281427525!3d14.664859089761544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b45048cec08f%3A0x7883c1dd8e70d784!2sT+Tiangco+St%2C+Malabon%2C+Metro+Manila!5e0!3m2!1sen!2sph!4v1488022924181" width="100%" height="450" frameborder="0" style="border:0"></iframe>
+</div>
         </div>
     </section>
 
@@ -427,7 +399,6 @@
                                 <option value="na" selected="">Choose One:</option>
                                 <option value="service">General Customer Service</option>
                                 <option value="suggestions">Suggestions</option>
-                                <option value="product">Product Support</option>
                             </select>
                         </div>
                     </div>
@@ -449,18 +420,18 @@
         </div>
         <div class="col-md-4">
             <form>
-            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+            <legend><span class="glyphicon glyphicon-phone">Contact</span></legend>
             <address>
-                <strong>Twitter, Inc.</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
                 <abbr title="Phone">
                     P:</abbr>
-                (123) 456-7890
+                (123) 456-7890 <br>
+                <abbr title="Mobile">
+                    M:</abbr>
+                    09123123123 <br>
             </address>
             <address>
-                <strong>Full Name</strong><br>
-                <a href="mailto:#">first.last@example.com</a>
+                <strong>E-mail</strong><br>
+                <a href="mailto:#">bondoc.business123@gmail.com</a>
             </address>
             </form>
         </div>
@@ -488,6 +459,6 @@
     <script src="DIST/js/scrolling-nav.js"></script>
 
     <!-- Gallery Javascript -->
-    <script type="text/javascript" src="DIST/js/gallery.js"></script>
+    <script type="text/javascript" src="DIST/js/jquery.fancybox.js"></script>
 </body>
-</html>
+
